@@ -1,0 +1,36 @@
+{
+  "name": "location-map-filter-bahia",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Visualizador de pontos do programa Conecta Bahia no mapa da Bahia.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-educacao-integral": "node scripts/generateEducacaoIntegralData.mjs",
+    "generate-json": "node scripts/generateJson.mjs",
+    "generate-json:file": "node scripts/generateJson.mjs"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "firebase": "^12.10.0",
+    "html2canvas": "^1.4.1",
+    "idb-keyval": "^6.2.2",
+    "jspdf": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "topojson-client": "^3.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.0",
+    "vite": "^6.0.5"
+  },
+  "notes": {
+    "tailwind": "Tailwind CSS deve estar configurado no projeto destino. Veja README para instruções.",
+    "topojson": "O arquivo public/BA_(1)9396399957704198.json deve ser servido na rota raiz (ex: /public no Vite ou CRA)."
+  }
+}

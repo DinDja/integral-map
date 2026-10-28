@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpar Service Worker - Conecta Bahia</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .card {
+      background: white;
+      color: #333;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    h1 {
+      margin-top: 0;
+      color: #1E3A8A;
+    }
+    button {
+      background: #1E3A8A;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px 10px 10px 0;
+      transition: all 0.3s;
+    }
+    button:hover {
+      background: #2563EB;
+      transform: translateY(-2px);
+    }
+    button:disabled {
+      background: #94A3B8;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .status {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 6px;
+      background: #F1F5F9;
+    }
+    .success {
+      background: #D1FAE5;
+      color: #065F46;
+    }
+    .error {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
+    .info {
+      background: #DBEAFE;
+      color: #1E3A8A;
+    }
+    code {
+      background: #F1F5F9;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🧹 Limpeza de Cache - Conecta Bahia</h1>
+    <p>Use esta página para limpar todos os caches e resetar o Service Worker.</p>
+    
+    <button onclick="unregisterServiceWorker()">1. Desregistrar Service Worker</button>
+    <button onclick="clearAllCaches()">2. Limpar Todos os Caches</button>
+    <button onclick="clearIndexedDB()">3. Limpar IndexedDB</button>
+    <button onclick="clearAll()">🔥 LIMPAR TUDO</button>
+    
+    <div id="status" class="status info">
+      <strong>Status:</strong> Aguardando ação...
+    </div>
+
+    <hr style="margin: 30px 0; border: 1px solid #E2E8F0;">
+    
+    <h3>Manual (DevTools):</h3>
+    <ol style="line-height: 1.8;">
+      <li>Abra DevTools: <code>F12</code></li>
+      <li>Vá em <code>Application</code> > <code>Service Workers</code></li>
+      <li>Clique em <code>Unregister</code></li>
+      <li>Vá em <code>Application</code> > <code>Storage</code></li>
+      <li>Clique em <code>Clear site data</code></li>
+      <li>Recarregue: <code>Ctrl + Shift + R</code></li>
+    </ol>
+
+    <button onclick="goHome()" style="background: #10B981; margin-top: 20px;">
+      ← Voltar para o App
+    </button>
+  </div>
+
+  <script>
+    const statusDiv = document.getElementById('status');
+
+    function showStatus(message, type = 'info') {
+      statusDiv.className = `status ${type}`;
+      statusDiv.innerHTML = `<strong>${type === 'success' ? '✅' : type === 'error' ? '❌' : 'ℹ️'}</strong> ${message}`;
+    }
+
+    async function unregisterServiceWorker() {
+      try {
+        if ('serviceWorker' in navigator) {
+          const registrations = await navigator.serviceWorker.getRegistrations();
+          let count = 0;
+          for (let registration of registrations) {
+            await registration.unregister();
+            count++;
+          }
+          showStatus(`${count} Service Worker(s) desregistrado(s) com sucesso!`, 'success');
+        } else {
+          showStatus('Service Worker não suportado neste navegador.', 'info');
+        }
+      } catch (err) {
+        showStatus(`Erro ao desregistrar Service Worker: ${err.message}`, 'error');
+      }
+    }
+
+    async function clearAllCaches() {
+      try {
+        if ('caches' in window) {
+          const cacheNames = await caches.keys();
+          let count = 0;
+          for (let cacheName of cacheNames) {
+            await caches.delete(cacheName);
+            count++;
+          }
+          showStatus(`${count} cache(s) limpo(s) com sucesso!`, 'success');
+        } else {
+          showStatus('Cache API não suportada neste navegador.', 'info');
+        }
+      } catch (err) {
+        showStatus(`Erro ao limpar caches: ${err.message}`, 'error');
+      }
+    }
+
+    async function clearIndexedDB() {
+      try {
+        // Limpar pelo idb-keyval
+        const { del } = await import('/node_modules/idb-keyval/dist/index.js');
+        await del('conecta_spreadsheet_data');
+        await del('conecta_spreadsheet_timestamp');
+        
+        showStatus('IndexedDB limpo com sucesso!', 'success');
+      } catch (err) {
+        console.error(err);
+        showStatus(`IndexedDB limpo (método alternativo). Possível erro: ${err.message}`, 'success');
+      }
+    }
+
+    async function clearAll() {
+      showStatus('Limpando tudo... aguarde...', 'info');
+      
+      await unregisterServiceWorker();
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      await clearAllCaches();
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      await clearIndexedDB();
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
+      // Limpar localStorage e sessionStorage
+      localStorage.clear();
+      sessionStorage.clear();
+      
+      showStatus('✅ TUDO LIMPO! Recarregando em 2 segundos...', 'success');
+      
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 2000);
+    }
+
+    function goHome() {
+      window.location.href = '/';
+    }
+  </script>
+</body>
+</html>

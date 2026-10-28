@@ -1,0 +1,1772 @@
+{
+  "Abaíra": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Rua Camerindo Novais",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado da Fazenda Limeira",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Água Fria": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Barra - Água Fria",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Sede - Água Fria",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Aiquara": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Palmeirinha",
+      "territorio_identidade": "Médio Rio de Contas"
+    }
+  ],
+  "Alagoinhas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Dionísio Evilásio (Praça Kennedy)",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça dos Esportes",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça José Joaquim Seabra, Centro",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Mário Laert",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Pedro da Costa Dórea",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Almadina": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça José Ferreira da Silva \"Braguinha\"",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Amélia Rodrigues": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Schitinni, Centro",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Angical": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Fazendinha",
+      "territorio_identidade": "Bacia do Rio Grande"
+    }
+  ],
+  "Anguera": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Arnold da Silva - Zona Rural - Areia",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Municipal (Sede) - Anguera",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Nativos Dantas - Zona Rural (Povoado de Guaribas)",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Sisínio Silva Santa Cruz - Zona Rural - Jenipapo",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Antas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Dr. Geraldo Góes",
+      "territorio_identidade": "Semiárido Nordeste II"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade Quilombola do Raso Velos",
+      "territorio_identidade": "Semiárido Nordeste II"
+    }
+  ],
+  "Antônio Cardoso": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Oleiro",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito Quilombola do Poço",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Araças": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado do Gaioso (Quilombola)",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Araci": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Nossa Senhora da Conceição",
+      "territorio_identidade": "Sisal"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Tanque da Nação",
+      "territorio_identidade": "Sisal"
+    }
+  ],
+  "Aramari": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça José de Araújo Batista - Distrito de Olhos d’Água",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Nossa Senhora da Conceição - Distrito de Olhos d’Água",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Aratacá": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praças Filadelfo Almeida - (Distrito de Anuri)",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Olímpio Guilherme Martins da Silva - (Distrito de Itatingui)",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Aurelino Leal": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Centro - Aurelino Leal",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Baianópolis": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade de Cocal",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Cocos",
+      "territorio_identidade": "Bacia do Rio Grande"
+    }
+  ],
+  "Barra da Estiva": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Camulengo - Quilombo",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Barra": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade Quilombola de Curralinho",
+      "territorio_identidade": "Velho Chico"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Barão de Cotegipe (Coreto)",
+      "territorio_identidade": "Velho Chico"
+    }
+  ],
+  "Barro Preto - Gov. Lomanto Jr.": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Antônio Osório Batista, Centro",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Belmonte": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Santa Maria Eterna",
+      "territorio_identidade": "Costa do Descobrimento"
+    }
+  ],
+  "Boa Nova": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Penachinho",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito do Valentim",
+      "territorio_identidade": "Médio Rio de Contas"
+    }
+  ],
+  "Boa Vista do Tupim": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Bairro de Climério",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Bairro de Carmelito",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    }
+  ],
+  "Bonito": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Núcleo Rural Diamante",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Gitirana (Comunidade Quilombola)",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Brotas de Macaúbas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade de Santo André, Região do Cocal",
+      "territorio_identidade": "Velho Chico"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Central (Curralinho de Baixo), Zona Rural",
+      "territorio_identidade": "Velho Chico"
+    }
+  ],
+  "Buerarema": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Vila Operária",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Domingos Cabral",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Buritirama": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça São Sebastião - Comunidade de Altamira",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Filemon Teixeira - Comunidade de Poço da Jurema",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça São Pedro - Comunidade do Bonsossego",
+      "territorio_identidade": "Bacia do Rio Grande"
+    }
+  ],
+  "Cabaçeiras do Paraguaçu": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Sede",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça de Geolândia",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "Cachoeira": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça 25 de Junho, Centro",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça da Escola Capoeiruçu",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça do Cristo, Tabuleiro da Vitória",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça de Belém",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "Caetanos": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Otávio José Curvelo, Centro",
+      "territorio_identidade": "Sudoeste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Caldeirão de Nicolau",
+      "territorio_identidade": "Sudoeste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Badu",
+      "territorio_identidade": "Sudoeste Baiano"
+    }
+  ],
+  "Cairú": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Torrinhas - Cais de Torrinhas",
+      "territorio_identidade": "Baixo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Sede - Praça Manuel Veiga Peleteiro",
+      "territorio_identidade": "Baixo Sul"
+    }
+  ],
+  "Camacã": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça João Gonçalves de Jesus",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Mário Batista, Centro",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça União Rocha - Distrito de Leovê",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Camaçari": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Cidade do Saber",
+      "territorio_identidade": "Metropolitano de Salvador"
+    }
+  ],
+  "Camamu": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Tapuia",
+      "territorio_identidade": "Baixo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Pinaré",
+      "territorio_identidade": "Baixo Sul"
+    }
+  ],
+  "Candeal": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Belo Alto",
+      "territorio_identidade": "Sisal"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Chapada",
+      "territorio_identidade": "Sisal"
+    }
+  ],
+  "Candeias": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Distrito - Distrito de Caboto",
+      "territorio_identidade": "Metropolitano de Salvador"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Distrito - Distrito de Passé",
+      "territorio_identidade": "Metropolitano de Salvador"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Tertuliano Joaquim Neto",
+      "territorio_identidade": "Metropolitano de Salvador"
+    }
+  ],
+  "Canudos": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Mata-Burro",
+      "territorio_identidade": "Sertão do São Francisco"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Rasinho - Povoado Rural",
+      "territorio_identidade": "Sertão do São Francisco"
+    }
+  ],
+  "Caravelas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Estação Ferroviária",
+      "territorio_identidade": "Extremo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Dr. Eduardo Simões de Sá Oliveira",
+      "territorio_identidade": "Extremo Sul"
+    }
+  ],
+  "Casa Nova": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Bem Bom",
+      "territorio_identidade": "Sertão do São Francisco"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Pau a Pique",
+      "territorio_identidade": "Sertão do São Francisco"
+    }
+  ],
+  "Catolândia": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Mozondó - Praça Herculano Rodrigues Santos",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Ginásio",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Mercado",
+      "territorio_identidade": "Bacia do Rio Grande"
+    }
+  ],
+  "Caturama": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Mucambo",
+      "territorio_identidade": "Bacia do Paramirim"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade de Baraúnas (Zona Rural)",
+      "territorio_identidade": "Bacia do Paramirim"
+    }
+  ],
+  "Conceição do Almeida": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Mercado Municipal - Conceição do Almeida",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "Conde": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Largo do Assentamento Nova Esperança",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Eduardo Cavalcanti Lins – Altamira",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Cravolândia": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade do Congo",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Batedeira",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Crisópolis": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito Buril",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Umbaúba",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Cristópolis": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Povoado de Mata do Cedro",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Lírio Miranda",
+      "territorio_identidade": "Bacia do Rio Grande"
+    }
+  ],
+  "Curaçá": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Riacho Seco, Zona Rural",
+      "territorio_identidade": "Sertão do São Francisco"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Viveiro (Sede - Curaçá)",
+      "territorio_identidade": "Sertão do São Francisco"
+    }
+  ],
+  "Dias DÁvila": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade Católica - Padre Pio, Cidade Santa",
+      "territorio_identidade": "Metropolitano de Salvador"
+    }
+  ],
+  "Euclides da Cunha": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade Ruylândia",
+      "territorio_identidade": "Semiárido Nordeste II"
+    }
+  ],
+  "Feira da Mata": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Pública, Distrito de Ramalho",
+      "territorio_identidade": "Velho Chico"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Municipal Isaías Marques",
+      "territorio_identidade": "Velho Chico"
+    }
+  ],
+  "Feira de Santana": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Distrito de Ipuáçu",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Distrito de Matinha",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Gavião": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Bíblia",
+      "territorio_identidade": "Bacia do Jacuípe"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Joaquim Pantaleão da Cunha",
+      "territorio_identidade": "Bacia do Jacuípe"
+    }
+  ],
+  "Guanambi": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Gercino Coelho (Bradesco)",
+      "territorio_identidade": "Sertão Produtivo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Henrique Pereira Donato (Feijão)",
+      "territorio_identidade": "Sertão Produtivo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Manoel Novaes (Colégio Luiz Viana Filho)",
+      "territorio_identidade": "Sertão Produtivo"
+    }
+  ],
+  "Guaratinga": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Principal de Barra Nova",
+      "territorio_identidade": "Costa do Descobrimento"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Principal de Buranhém",
+      "territorio_identidade": "Costa do Descobrimento"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Principal de Cajuíta",
+      "territorio_identidade": "Costa do Descobrimento"
+    }
+  ],
+  "Heliópolis": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da UBS, Povoado Tijuco",
+      "territorio_identidade": "Semiárido Nordeste II"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Povoado João Grande",
+      "territorio_identidade": "Semiárido Nordeste II"
+    }
+  ],
+  "Ibicoara": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Córrego Fundo (Zona Rural Quilombola)",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Fazenda Encantada, s/n (Povoado Encantada)",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Ibicuí": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Waldir Motta Veiga, Ibitupa",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Terezinha, Distrito de Água Doce",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    }
+  ],
+  "Ibiquera": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Nova - Ibiquera",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça São José",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    }
+  ],
+  "Ibirapitanga": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Felix (Praça Principal), Novo Horizonte",
+      "territorio_identidade": "Baixo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distritos de Itamarati - Praça Antônio Bernardes (Praça Principal)",
+      "territorio_identidade": "Baixo Sul"
+    }
+  ],
+  "Ibititá": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Feira Livre - Ibititá",
+      "territorio_identidade": "Irecê"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Urbano Macêdo (Praça do Comércio)",
+      "territorio_identidade": "Irecê"
+    }
+  ],
+  "Ipiaú": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Fazenda do Povo",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Horta Comunitária",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Ruy Barbosa",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Região de Córrego de Pedra",
+      "territorio_identidade": "Médio Rio de Contas"
+    }
+  ],
+  "Ipupiara": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Matriz",
+      "territorio_identidade": "Irecê"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Osvaldo Leite",
+      "territorio_identidade": "Irecê"
+    }
+  ],
+  "Irajuba": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado Ipauaté",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Iramaia": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Feliciano Augusto de Souza, Centro",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Principal de Iramaia - Distrito de Cruzlândia (Placa)",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Irará": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Pedro Nogueira",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Raul Ferreira da Cruz",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Itabela": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Fórum",
+      "territorio_identidade": "Costa do Descobrimento"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Inocêncio Pereira",
+      "territorio_identidade": "Costa do Descobrimento"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Moacir Francisqueto",
+      "territorio_identidade": "Costa do Descobrimento"
+    }
+  ],
+  "Itagibá": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça do Cinquentenário",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Quintiliano no Bairro Gilda Fonseca",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Padre Emanuel Rachela (Hélio Quadros)",
+      "territorio_identidade": "Médio Rio de Contas"
+    }
+  ],
+  "Itamarajú": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Lagoa do Jacaré",
+      "territorio_identidade": "Extremo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Castelo Branco",
+      "territorio_identidade": "Extremo Sul"
+    }
+  ],
+  "Itanagra": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado do Treme",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado do Itapecirica II",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Itapicurú": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Bandeira",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça José Epifânio de Souza",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Itarantim": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Luís Viana Filho, Centro",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito Ribeirão do Salto",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    }
+  ],
+  "Itatim": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Liberdade",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    }
+  ],
+  "Ituberá": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Centro da Barra de Serinhaém",
+      "territorio_identidade": "Baixo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Centro de Abastecimento Antônio do Nascimento (Feira Livre)",
+      "territorio_identidade": "Baixo Sul"
+    }
+  ],
+  "Jaguaquara": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Frei Franco Zitt - Centro Entrocamento",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça JJ Seabra, Jardim Palmeira - Centro",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Jaguaripe": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Pirajuía",
+      "territorio_identidade": "Baixo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Vereador Didi",
+      "territorio_identidade": "Baixo Sul"
+    }
+  ],
+  "Jequié": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça de Nova Esperança, Povoado de Nova Esperança",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Elaine Correia Borges",
+      "territorio_identidade": "Médio Rio de Contas"
+    }
+  ],
+  "Jeremoabo": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Antônio Ribeiro - Povoado de Água Branca",
+      "territorio_identidade": "Semiárido Nordeste II"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça João da Silva Varjão - Povoado Brejo Grande",
+      "territorio_identidade": "Semiárido Nordeste II"
+    }
+  ],
+  "Jiquiriçá": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Loteamento Pindoba",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Dom Florêncio",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Largo dos Prazeres",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Jitaúna": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Santa Terezinha",
+      "territorio_identidade": "Médio Rio de Contas"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Vila Temão",
+      "territorio_identidade": "Médio Rio de Contas"
+    }
+  ],
+  "Juazeiro": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "João Paulo II - Praça Central",
+      "territorio_identidade": "Sertão do São Francisco"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Maniçoba - Praça Principal",
+      "territorio_identidade": "Sertão do São Francisco"
+    }
+  ],
+  "Jussara": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Colégio, Comunidade Quilombola de Sítio Novo",
+      "territorio_identidade": "Irecê"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Machado Costa, Comunidade Quilombola de Algodões",
+      "territorio_identidade": "Irecê"
+    }
+  ],
+  "Jussari": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Assentamento Viva Vida",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Areia Branca",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Jussiape": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Jandira Oliveira",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Nove de Julho",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Lafaiete Coutinho": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Loteamento",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Papa João XXIII",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Lagoa Real": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça da Matriz - Lagoa Real",
+      "territorio_identidade": "Sertão Produtivo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Pedro José de Oliveira",
+      "territorio_identidade": "Sertão Produtivo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Mercado Fidelcino Cardoso",
+      "territorio_identidade": "Sertão Produtivo"
+    }
+  ],
+  "Laje": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Cidade",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Lajedinho": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Caldeirão",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Vila São Roque, Zona Rural",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    }
+  ],
+  "Lajedo do Tabocal": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado da Santana",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de São Pedro",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Lamarão": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Joaquim Pinto Batista, Centro",
+      "territorio_identidade": "Sisal"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Maria Arcanja",
+      "territorio_identidade": "Sisal"
+    }
+  ],
+  "Lauro de Freitas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Quingoma",
+      "territorio_identidade": "Metropolitano de Salvador"
+    }
+  ],
+  "Luís Eduardo Magalhães": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Mercado Municipal de Luís Eduardo Magalhães",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Mercado Municipal do Mimoso II",
+      "territorio_identidade": "Bacia do Rio Grande"
+    }
+  ],
+  "Macajuba": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Alípio Fraga de Macedo",
+      "territorio_identidade": "Piemonte do Paraguaçu"
+    }
+  ],
+  "Maiquinique": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Wilham Farias Valadão",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Francino Gobira",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Lomanto Júnior",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    }
+  ],
+  "Manoel Vitorino": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça da Igreja, Distrito de Catingal",
+      "territorio_identidade": "Médio Rio de Contas"
+    }
+  ],
+  "Mansidão": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça da Independência, Centro",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça de Eventos do Município, Centro",
+      "territorio_identidade": "Bacia do Rio Grande"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Barreiro",
+      "territorio_identidade": "Bacia do Rio Grande"
+    }
+  ],
+  "Maracás": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Pé de Serra",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Feira Livre",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Porto Alegre",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Marcionílio Souza": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado Lajedinho",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado Rancho Nevada",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Mascote": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Teixeira do Progresso",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Pimenta",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Miguel Calmon": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Distrito de Brejo Grande",
+      "territorio_identidade": "Piemonte da Diamantina"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Gilberto Miranda, Bairro Populares",
+      "territorio_identidade": "Piemonte da Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Lauro de Freitas",
+      "territorio_identidade": "Piemonte da Diamantina"
+    }
+  ],
+  "Milagres": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Sede do Município - Milagres",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Mirante": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Boaventura de Oliveira",
+      "territorio_identidade": "Sudoeste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Orlando Pitombo",
+      "territorio_identidade": "Sudoeste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Santo Antônio",
+      "territorio_identidade": "Sudoeste Baiano"
+    }
+  ],
+  "Morro do Chapéu": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Fedegosos, s/n, Distrito",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Icó, s/n",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Municipal (Sede) - Morro do Chapéu",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Mucugê": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado do Guiné de Baixo",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Guiné",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Mulungu do Morro": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Lagoa Damascena",
+      "territorio_identidade": "Irecê"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distritos de Várzea do Cerco",
+      "territorio_identidade": "Irecê"
+    }
+  ],
+  "Muniz Ferreira": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Sodoma",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Onha",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "Mutuípe": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Centro Municipal de Abastecimento",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Campo Berganha (Fundo do Estádio Municipal)",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Nazaré": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Tércio Plácido – Ilha das Cobras",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Rua Pedro Moreira Tupinambá",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "Nordestina": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Principal - Povoado de Mari",
+      "territorio_identidade": "Sisal"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça João Soares Moura",
+      "territorio_identidade": "Sisal"
+    }
+  ],
+  "Nova Itarana": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Antônio Dilson",
+      "territorio_identidade": "Vale do Jiquiriça"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça João Soares (Centro)",
+      "territorio_identidade": "Vale do Jiquiriça"
+    }
+  ],
+  "Ourolândia": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Lagoa do 33",
+      "territorio_identidade": "Piemonte da Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Barragem",
+      "territorio_identidade": "Piemonte da Diamantina"
+    }
+  ],
+  "Paramirim": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Balneário do Rio Paramirim",
+      "territorio_identidade": "Bacia do Paramirim"
+    }
+  ],
+  "Pau Brasil": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Colégio ACM",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Juracy Magalhães",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Pedrão": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Sapé (Zona Rural)",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade do Patrimônio",
+      "territorio_identidade": "Litoral Norte e Agreste Baiano"
+    }
+  ],
+  "Pindaí": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Genebaldo Correia, Centro",
+      "territorio_identidade": "Sertão Produtivo"
+    }
+  ],
+  "Pintadas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Manoel Pantaleão",
+      "territorio_identidade": "Bacia do Jacuípe"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Honorato Gonçalves, Centro",
+      "territorio_identidade": "Bacia do Jacuípe"
+    }
+  ],
+  "Ponto Novo": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Distrito de Barracas",
+      "territorio_identidade": "Piemonte Norte do Itapicuru"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Nelson Maia",
+      "territorio_identidade": "Piemonte Norte do Itapicuru"
+    }
+  ],
+  "Presidente Dutra": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Municipal - Presidente Dutra",
+      "territorio_identidade": "Irecê"
+    }
+  ],
+  "Quijingue": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Algodões",
+      "territorio_identidade": "Sisal"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Municipal Quijingue (Sede) - Praça Tiradentes",
+      "territorio_identidade": "Sisal"
+    }
+  ],
+  "Remanso": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Malhadinha",
+      "territorio_identidade": "Sertão do São Francisco"
+    }
+  ],
+  "Ribeira do Amparo": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Educação, Sede",
+      "territorio_identidade": "Semiárido Nordeste II"
+    }
+  ],
+  "Ribeira do Pombal": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Getúlio Vargas",
+      "territorio_identidade": "Semiárido Nordeste II"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Manoel Vitório de Souza",
+      "territorio_identidade": "Semiárido Nordeste II"
+    }
+  ],
+  "Rio de Contas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Comunidade Quilombola de Baraúnas",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Matriz Maestro Esaú Pinto, Centro",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Santo Antônio, Distrito de Mato Grosso",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Rio do Pires": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Comunidade de Alagoinhas",
+      "territorio_identidade": "Bacia do Paramirim"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Sede",
+      "territorio_identidade": "Bacia do Paramirim"
+    }
+  ],
+  "Salinas da Margarida": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Tenente Albuquerque, Centro",
+      "territorio_identidade": "Metropolitano de Salvador"
+    }
+  ],
+  "Santa Cruz da Vitória": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Bairro Mariete Macêdo",
+      "territorio_identidade": "Médio Sudoeste da Bahia"
+    }
+  ],
+  "Santanópolis": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Comunidade da Boa Espera",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Comunidade da Queimada Grande",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Alto Alegre",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Santo Antônio de Jesus": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Renato Machado",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "São Paulo",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Irmã Dulce",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "São Gabriel": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Povoado Lagoinha",
+      "territorio_identidade": "Irecê"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Povoado de Curralinho",
+      "territorio_identidade": "Irecê"
+    }
+  ],
+  "São Gonçalo dos Campos": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Estação (Aníbal Pedreira)",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Matriz (Pe. Bráulio Seixas)",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Sapeaçu": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Murici",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça de Baixa do Palmeiras",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "Seabra": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Municipal - Sede Seabra (Praça do Correio)",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Bandeira, Sede",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Serra Preta": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Bravo",
+      "territorio_identidade": "Bacia do Jacuípe"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Sede - Serra Preta",
+      "territorio_identidade": "Bacia do Jacuípe"
+    }
+  ],
+  "Serrolândia": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Povoado de Maracujá",
+      "territorio_identidade": "Piemonte da Diamantina"
+    }
+  ],
+  "Tanque Novo": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Ângelo Marques",
+      "territorio_identidade": "Bacia do Paramirim"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Bento Carneiro",
+      "territorio_identidade": "Bacia do Paramirim"
+    }
+  ],
+  "Teixeira de Freitas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Mercado Municipal",
+      "territorio_identidade": "Extremo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Parque da Biquinha",
+      "territorio_identidade": "Extremo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Hilton Chicon",
+      "territorio_identidade": "Extremo Sul"
+    }
+  ],
+  "Teodoro Sampaio": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Canabrava",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Buracica",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Tabuleiro da Chã",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Terra Nova": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Espaço Banguê",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Estádio Municipal",
+      "territorio_identidade": "Portal do Sertão"
+    },
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça São Roque, Centro",
+      "territorio_identidade": "Portal do Sertão"
+    }
+  ],
+  "Ubaitaba": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Faisqueira",
+      "territorio_identidade": "Litoral Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Distrito de Pirauna",
+      "territorio_identidade": "Litoral Sul"
+    }
+  ],
+  "Umburanas": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Pedro Souza Cruz",
+      "territorio_identidade": "Piemonte da Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Feira Livre - Umburanas",
+      "territorio_identidade": "Piemonte da Diamantina"
+    }
+  ],
+  "Utinga": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Cabeceira do Rio",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Lagoa Bonita",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de São Roque",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ],
+  "Valente": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Catiana Carneiro Gordia, Distrito de Valilândia",
+      "territorio_identidade": "Sisal"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Matriz, Distrito de Valilândia",
+      "territorio_identidade": "Sisal"
+    }
+  ],
+  "Várzea do Poço": [
+    {
+      "projeto": "Conecta I",
+      "nome_da_praca": "Praça Edvaldo Valois, Centro",
+      "territorio_identidade": "Bacia do Jacuípe"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Ariosto Soares da Cunha",
+      "territorio_identidade": "Bacia do Jacuípe"
+    }
+  ],
+  "Várzea Nova": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Povoado de Mulungu",
+      "territorio_identidade": "Piemonte da Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça José Araújo Silva, Centro",
+      "territorio_identidade": "Piemonte da Diamantina"
+    }
+  ],
+  "Varzedo": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça 8 de Dezembro",
+      "territorio_identidade": "Recôncavo"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Estação",
+      "territorio_identidade": "Recôncavo"
+    }
+  ],
+  "Vereda": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Antônio Barreto - Praça Principal",
+      "territorio_identidade": "Extremo Sul"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça da Bíblia – Rua Hércules Favaratto, Centro",
+      "territorio_identidade": "Extremo Sul"
+    }
+  ],
+  "Wagner": [
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça 2 de Julho",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça do Bule",
+      "territorio_identidade": "Chapada Diamantina"
+    },
+    {
+      "projeto": "Conecta II",
+      "nome_da_praca": "Praça Joaquim Macedo",
+      "territorio_identidade": "Chapada Diamantina"
+    }
+  ]
+}

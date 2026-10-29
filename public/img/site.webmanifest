@@ -1,6 +1,6 @@
 {
-  "name": "ConectaBaha",
-  "short_name": "ConectaBaha",
+  "name": "Educação Integral na Bahia",
+  "short_name": "Ed. Integral",
   "icons": [
     {
       "src": "/img/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#153c61",
+  "background_color": "#fcfaf5",
   "display": "standalone"
 }

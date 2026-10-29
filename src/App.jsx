@@ -43,17 +43,14 @@ export default function App() {
               Educação Integral <span className="text-[#d91f26]">na Bahia</span>
             </h1>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-              Acompanhe a expansão dos municípios com Educação Integral ao longo dos anos e explore os registros no mapa.
+              Compare a expansão registrada e explore o planejamento de universalização da Educação Integral na Bahia.
             </p>
           </div>
         </div>
         <BahiaPattern />
       </header>
 
-      <main className="mx-auto w-full max-w-[1440px] flex-1 px-0 pb-10 sm:px-6 sm:pb-14 lg:px-10">
-        <div className="mb-4 px-4 pt-5 sm:px-0 sm:pt-7">
-          <p className="text-xs font-medium text-slate-500">Escolha um ano para ver o crescimento acumulado dos municípios participantes.</p>
-        </div>
+      <main className="mx-auto w-full max-w-[1440px] flex-1 px-0 pb-10 pt-5 sm:px-6 sm:pb-14 sm:pt-7 lg:px-10">
         <EducacaoIntegralMap />
       </main>
 

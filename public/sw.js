@@ -1,9 +1,17 @@
-const CACHE_NAME = 'conecta-bahia-v4';
+const CACHE_NAME = 'conecta-bahia-v5';
 
 const STATIC_ASSETS = [
   '/BA_(1)9396399957704198.json',
   '/img/LogoConecta.png',
   '/img/MARCA%20GOVBA%200126%20-%20DO%20LADO%20DA%20GENTE__H.png',
+  '/favicon.ico',
+  '/favicon-v3.ico',
+  '/favicon-v3.svg',
+  '/img/favicon-v3-96x96.png',
+  '/img/apple-touch-icon-v3.png',
+  '/img/site-v3.webmanifest',
+  '/img/web-app-manifest-v3-192x192.png',
+  '/img/web-app-manifest-v3-512x512.png',
 ];
 
 const DATA_URLS = [

@@ -920,38 +920,21 @@ export const universalizationMunicipalities = {
       "CABACEIRAS DO PARAGUAÇU",
       "SÃO FELIPE",
       "SANTA MARIA DA VITÓRIA",
-      "ITAGIMIRIM"
-    ]
-  },
-  "proposalsByYear": {
-    "2027": [
-      "BARRO ALTO"
-    ],
-    "2028": [
-      "MULUNGU DO MORRO"
-    ],
-    "2029": [
-      "LAJEDÃO"
-    ],
-    "2030": [
-      "CAATIBA"
-    ],
-    "2031": [
-      "RIBEIRA DO AMPARO"
-    ],
-    "2032": [
-      "ITAPICURU"
-    ],
-    "2033": [
+      "ITAGIMIRIM",
+      "ITAPICURU",
       "TABOCAS DO BREJO VELHO"
-    ],
-    "2034": [
-      "GUARATINGA"
-    ],
-    "2035": [
-      "ITABELA"
     ]
   },
+  "proposalsByYear": {},
+  "expansionWorks": [
+    "BARRO ALTO",
+    "MULUNGU DO MORRO",
+    "LAJEDÃO",
+    "CAATIBA",
+    "RIBEIRA DO AMPARO",
+    "GUARATINGA",
+    "ITABELA"
+  ],
   "needsLicitation": [
     "BARROCAS",
     "CANUDOS",

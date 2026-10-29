@@ -16,8 +16,9 @@ const YEAR_COLORS = {
   2026: '#C89414',
 };
 const UNIVERSALIZATION_STATUS = {
-  forecast: { label: 'Previsão para ofertar', color: '#E8A11A' },
-  proposal: { label: 'Proposta para ofertar', color: '#164F86' },
+  forecast: { label: 'Previsão para passar a ofertar', color: '#E8A11A' },
+  proposal: { label: 'Proposta para passar a ofertar', color: '#164F86' },
+  expansion: { label: 'Obras previstas para expansão', color: '#0F766E' },
   licitation: { label: 'Necessita licitação', color: '#58666F' },
 };
 
@@ -127,6 +128,9 @@ const getUniversalizationMap = () => {
 
   addMunicipalities(universalizationMunicipalities.forecastByYear, 'forecast');
   addMunicipalities(universalizationMunicipalities.proposalsByYear, 'proposal');
+  (universalizationMunicipalities.expansionWorks || []).forEach((name) => {
+    statusMap.set(municipioKey(name), { type: 'expansion' });
+  });
   (universalizationMunicipalities.needsLicitation || []).forEach((name) => {
     statusMap.set(municipioKey(name), { type: 'licitation' });
   });
@@ -138,6 +142,7 @@ const forecastByYear = universalizationMunicipalities.forecastByYear || {};
 const proposalsByYear = universalizationMunicipalities.proposalsByYear || {};
 const forecast2027Count = forecastByYear[FORECAST_YEAR]?.length || 0;
 const proposalCount = Object.values(proposalsByYear).reduce((total, names) => total + names.length, 0);
+const expansionWorksCount = (universalizationMunicipalities.expansionWorks || []).length;
 const needsLicitationCount = (universalizationMunicipalities.needsLicitation || []).length;
 const municipalitiesWithoutIntegralEducation = universalizationMunicipalities.needsLicitation || [];
 const municipalitiesWithoutIntegralEducationKeys = new Set(municipalitiesWithoutIntegralEducation.map(municipioKey));
@@ -161,10 +166,11 @@ function ForecastSummary() {
   const firstProposalYear = proposalYears[0];
   const lastProposalYear = proposalYears.at(-1);
   const stages = [
-    { type: 'forecast', count: forecast2027Count, label: 'Previsão para ofertar', detail: '2027' },
-    { type: 'proposal', count: proposalCount, label: 'Em proposta', detail: `${firstProposalYear || '—'}–${lastProposalYear || '—'}` },
+    { type: 'forecast', count: forecast2027Count, label: 'Previsão para passar a ofertar', detail: '2027' },
+    { type: 'expansion', count: expansionWorksCount, label: 'Obras previstas para expansão', detail: 'Sem ano definido' },
+    ...(proposalCount > 0 ? [{ type: 'proposal', count: proposalCount, label: 'Em proposta', detail: `${firstProposalYear || '—'}–${lastProposalYear || '—'}` }] : []),
     { type: 'licitation', count: needsLicitationCount, label: 'Necessita licitação', detail: 'Municípios sem Educação Integral' },
-  ];
+  ].filter((stage) => stage.count > 0);
 
   return (
     <section aria-labelledby="forecast-heading" className="mt-5 overflow-hidden rounded-2xl border border-[#ded8cc] bg-[#fbfaf6]">
@@ -177,13 +183,13 @@ function ForecastSummary() {
           </div>
           <h3 id="forecast-heading" className="mt-4 text-lg font-bold tracking-tight">Expansão em etapas</h3>
           <p className="mt-1.5 max-w-sm text-xs leading-relaxed text-white/70 sm:text-sm">
-            O planejamento reúne previsões de oferta para 2027, propostas para os próximos anos e municípios que necessitam de licitação.
+            O planejamento reúne previsões para 2027, obras previstas para expansão, propostas para outros anos e municípios que necessitam de licitação.
           </p>
         </div>
 
         <div className="px-4 py-5 sm:px-6 sm:py-6">
           <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">Situação dos municípios</p>
-          <div className="mb-4 flex h-2 overflow-hidden rounded-full bg-[#e8e3d9]" role="img" aria-label={`${forecast2027Count} previstos para 2027, ${proposalCount} em proposta e ${needsLicitationCount} na situação Necessita licitação`}>
+          <div className="mb-4 flex h-2 overflow-hidden rounded-full bg-[#e8e3d9]" role="img" aria-label={`${forecast2027Count} previsões para 2027, ${expansionWorksCount} com obras previstas para expansão, ${proposalCount} em proposta e ${needsLicitationCount} na situação Necessita licitação`}>
             {stages.map((stage) => (
               <span
                 key={stage.type}
@@ -474,13 +480,7 @@ export default function EducacaoIntegralMap() {
                 const firstYear = cohortMap.get(key);
                 const status = universalizationMap.get(key);
                 const selected = selectedMunicipioKey === key;
-                const statusLabel = status?.type === 'forecast'
-                  ? `${status.year} previsto`
-                  : status?.type === 'proposal'
-                    ? `${status.year} proposta`
-                    : status?.type === 'licitation'
-                      ? UNIVERSALIZATION_STATUS.licitation.label
-                      : '';
+                const statusLabel = UNIVERSALIZATION_STATUS[status.type].label + (status.year ? ' ' + status.year : '');
                 return (
                   <div key={feature.geocode || feature.name} role="listitem">
                     <button
@@ -617,7 +617,8 @@ export default function EducacaoIntegralMap() {
                 <span className="mr-1 text-[10px] font-bold uppercase tracking-[0.13em] text-slate-500">Situação</span>
                 {[
                   { type: 'forecast', label: 'Previsão 2027', count: forecast2027Count },
-                  { type: 'proposal', label: 'Proposta', count: proposalCount },
+                  { type: 'expansion', label: 'Obras previstas para expansão', count: expansionWorksCount },
+                  ...(proposalCount > 0 ? [{ type: 'proposal', label: 'Proposta', count: proposalCount }] : []),
                   { type: 'licitation', label: 'Necessita licitação', count: needsLicitationCount },
                 ].map((item) => (
                   <span key={item.type} className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600">

@@ -44,6 +44,7 @@ const universalizationRows = universalizationSheet
   : [];
 const forecastByYear = {};
 const proposalsByYear = {};
+const expansionWorks = [];
 const tenderRows = [];
 
 universalizationRows.forEach((row) => {
@@ -60,6 +61,8 @@ universalizationRows.forEach((row) => {
     proposalsByYear[proposalYear].push(municipality);
   } else if (/^Necessita licitação$/i.test(status)) {
     tenderRows.push(municipality);
+  } else if (normalizeText(status) === 'obrasprevistasparaexpansao') {
+    expansionWorks.push(municipality);
   }
 });
 
@@ -80,6 +83,7 @@ if (eightMunicipalityNames.length && needsLicitation.some((name) => !tenderRows.
 const universalizationMunicipalities = {
   forecastByYear,
   proposalsByYear,
+  expansionWorks,
   needsLicitation,
 };
 

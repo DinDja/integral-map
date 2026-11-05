@@ -3,8 +3,6 @@ import * as topojson from 'topojson-client';
 import { educationMunicipalitiesByYear, universalizationMunicipalities } from './src/data/educacaoIntegralMunicipios.js';
 
 const DATA_YEARS = Object.keys(educationMunicipalitiesByYear).map(Number).sort((a, b) => a - b);
-const FORECAST_YEAR = 2027;
-const YEARS = [...new Set([...DATA_YEARS, FORECAST_YEAR])].sort((a, b) => a - b);
 const SVG_W = 600;
 const SVG_H = 600;
 const PADDING = 20;
@@ -14,6 +12,7 @@ const YEAR_COLORS = {
   2022: '#8A5A32',
   2023: '#164F86',
   2026: '#C89414',
+  2027: '#7C3AED',
 };
 const UNIVERSALIZATION_STATUS = {
   forecast: { label: 'Previsão para passar a ofertar', color: '#E8A11A' },
@@ -118,6 +117,11 @@ const getCohortMap = () => {
 
 const cohortMap = getCohortMap();
 
+const forecastByYear = Object.fromEntries(
+  Object.entries(universalizationMunicipalities.forecastByYear || {})
+    .filter(([year]) => Number(year) !== 2027),
+);
+
 const getUniversalizationMap = () => {
   const statusMap = new Map();
   const addMunicipalities = (municipalitiesByYear, type) => {
@@ -126,7 +130,7 @@ const getUniversalizationMap = () => {
     });
   };
 
-  addMunicipalities(universalizationMunicipalities.forecastByYear, 'forecast');
+  addMunicipalities(forecastByYear, 'forecast');
   addMunicipalities(universalizationMunicipalities.proposalsByYear, 'proposal');
   (universalizationMunicipalities.expansionWorks || []).forEach((name) => {
     statusMap.set(municipioKey(name), { type: 'expansion' });
@@ -138,9 +142,7 @@ const getUniversalizationMap = () => {
 };
 
 const universalizationMap = getUniversalizationMap();
-const forecastByYear = universalizationMunicipalities.forecastByYear || {};
 const proposalsByYear = universalizationMunicipalities.proposalsByYear || {};
-const forecast2027Count = forecastByYear[FORECAST_YEAR]?.length || 0;
 const proposalCount = Object.values(proposalsByYear).reduce((total, names) => total + names.length, 0);
 const expansionWorksCount = (universalizationMunicipalities.expansionWorks || []).length;
 const needsLicitationCount = (universalizationMunicipalities.needsLicitation || []).length;
@@ -149,7 +151,7 @@ const municipalitiesWithoutIntegralEducationKeys = new Set(municipalitiesWithout
 const WITHOUT_INTEGRAL_EDUCATION_COLOR = '#475569';
 const proposalYears = Object.keys(proposalsByYear).map(Number).sort((a, b) => a - b);
 const universalizationCount = universalizationMap.size;
-const INITIAL_SELECTED_YEAR = forecast2027Count > 0 ? FORECAST_YEAR : DATA_YEARS.at(-1) || 2014;
+const INITIAL_SELECTED_YEAR = DATA_YEARS.at(-1) || 2014;
 
 const formatNumber = (value) => new Intl.NumberFormat('pt-BR').format(value);
 
@@ -165,8 +167,14 @@ function IconSearch() {
 function ForecastSummary() {
   const firstProposalYear = proposalYears[0];
   const lastProposalYear = proposalYears.at(-1);
+  const forecastStages = Object.entries(forecastByYear).map(([year, names]) => ({
+    type: 'forecast',
+    count: names.length,
+    label: 'Previsão para passar a ofertar',
+    detail: year,
+  }));
   const stages = [
-    { type: 'forecast', count: forecast2027Count, label: 'Previsão para passar a ofertar', detail: '2027' },
+    ...forecastStages,
     { type: 'expansion', count: expansionWorksCount, label: 'Obras previstas para expansão', detail: 'Sem ano definido' },
     ...(proposalCount > 0 ? [{ type: 'proposal', count: proposalCount, label: 'Em proposta', detail: `${firstProposalYear || '—'}–${lastProposalYear || '—'}` }] : []),
     { type: 'licitation', count: needsLicitationCount, label: 'Necessita licitação', detail: 'Municípios sem Educação Integral' },
@@ -183,16 +191,16 @@ function ForecastSummary() {
           </div>
           <h3 id="forecast-heading" className="mt-4 text-lg font-bold tracking-tight">Expansão em etapas</h3>
           <p className="mt-1.5 max-w-sm text-xs leading-relaxed text-white/70 sm:text-sm">
-            O planejamento reúne previsões para 2027, obras previstas para expansão, propostas para outros anos e municípios que necessitam de licitação.
+            O planejamento reúne previsões registradas por ano, obras previstas para expansão, propostas e municípios que necessitam de licitação.
           </p>
         </div>
 
         <div className="px-4 py-5 sm:px-6 sm:py-6">
           <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.15em] text-slate-500">Situação dos municípios</p>
-          <div className="mb-4 flex h-2 overflow-hidden rounded-full bg-[#e8e3d9]" role="img" aria-label={`${forecast2027Count} previsões para 2027, ${expansionWorksCount} com obras previstas para expansão, ${proposalCount} em proposta e ${needsLicitationCount} na situação Necessita licitação`}>
+          <div className="mb-4 flex h-2 overflow-hidden rounded-full bg-[#e8e3d9]" role="img" aria-label={`${Object.entries(forecastByYear).map(([year, names]) => `${names.length} previsões para ${year}`).join(', ') || 'sem previsões por ano'}, ${expansionWorksCount} com obras previstas para expansão, ${proposalCount} em proposta e ${needsLicitationCount} na situação Necessita licitação`}>
             {stages.map((stage) => (
               <span
-                key={stage.type}
+                key={`${stage.type}-${stage.detail}`}
                 style={{
                   backgroundColor: UNIVERSALIZATION_STATUS[stage.type].color,
                   width: universalizationCount ? `${(stage.count / universalizationCount) * 100}%` : '0%',
@@ -202,7 +210,7 @@ function ForecastSummary() {
           </div>
           <div className="divide-y divide-[#e8e3d9]">
             {stages.map((stage) => (
-              <div key={stage.type} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-3 first:pt-0 last:pb-0">
+              <div key={`${stage.type}-${stage.detail}`} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-3 first:pt-0 last:pb-0">
                 <div className="flex min-w-0 items-start gap-2.5">
                   <span className="mt-1 h-3 w-3 shrink-0 rounded-[3px]" style={{ backgroundColor: UNIVERSALIZATION_STATUS[stage.type].color }} />
                   <div className="min-w-0">
@@ -248,8 +256,8 @@ export default function EducacaoIntegralMap() {
   }, []);
 
   const isWithoutIntegralView = mapView === 'without-integral';
-  const isForecastView = !isWithoutIntegralView && selectedYear === FORECAST_YEAR;
-  const isHistoricalView = !isWithoutIntegralView && !isForecastView;
+  const isUniversalizationView = mapView === 'universalization';
+  const isHistoricalView = !isWithoutIntegralView && !isUniversalizationView;
   const previousYear = DATA_YEARS.filter((year) => year < selectedYear).at(-1);
   const selectedYearData = educationMunicipalitiesByYear[selectedYear];
   const selectedMunicipioKey = municipioKey(selectedMunicipio);
@@ -259,11 +267,11 @@ export default function EducacaoIntegralMap() {
     .filter((feature) => {
       const key = municipioKey(feature.name);
       if (isWithoutIntegralView) return municipalitiesWithoutIntegralEducationKeys.has(key);
-      if (isForecastView) return universalizationMap.has(key);
+      if (isUniversalizationView) return universalizationMap.has(key);
       const firstYear = cohortMap.get(key);
       return firstYear && firstYear <= selectedYear;
     })
-    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR')), [isForecastView, isWithoutIntegralView, mapFeatures, selectedYear]);
+    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR')), [isUniversalizationView, isWithoutIntegralView, mapFeatures, selectedYear]);
 
   const visibleMunicipios = useMemo(() => {
     const term = normalizeMunicipio(searchTerm);
@@ -288,7 +296,7 @@ export default function EducacaoIntegralMap() {
           <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#a25c14]">Linha do tempo</p>
           <h2 className="mt-1 text-xl font-bold tracking-tight text-[#153c61] sm:text-2xl">Expansão por ano</h2>
           <p className="mt-2 text-xs leading-relaxed text-slate-500 sm:text-sm">
-            Consulte os registros históricos por ano ou abra o cenário de Universalização para 2027.
+            Consulte os registros históricos por ano ou abra o cenário de Universalização.
           </p>
         </div>
 
@@ -304,7 +312,7 @@ export default function EducacaoIntegralMap() {
                 const previousDataYear = DATA_YEARS.filter((dataYear) => dataYear < year).at(-1);
                 const total = yearData.length;
                 const added = total - (previousDataYear ? educationMunicipalitiesByYear[previousDataYear].length : 0);
-                const selected = !isWithoutIntegralView && selectedYear === year;
+                const selected = !isWithoutIntegralView && !isUniversalizationView && selectedYear === year;
                 const buttonStyle = selected
                   ? 'border-[#153c61] bg-[#153c61] text-white shadow-md shadow-[#153c61]/15'
                   : 'border-[#e7e2d8] bg-white text-[#153c61] hover:border-[#c6bda9] hover:bg-[#faf8f2]';
@@ -356,21 +364,20 @@ export default function EducacaoIntegralMap() {
               </button>
               <button
                 type="button"
-                disabled={forecast2027Count === 0}
-                aria-pressed={!isWithoutIntegralView && selectedYear === FORECAST_YEAR}
-                aria-label={`Universalização 2027, ${forecast2027Count} previsões de oferta`}
-                onClick={() => { setMapView('timeline'); setSelectedYear(FORECAST_YEAR); setSelectedMunicipio(''); }}
-                className={`flex min-h-[84px] w-full items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a25c14] focus-visible:ring-offset-2 ${!isWithoutIntegralView && selectedYear === FORECAST_YEAR
+                aria-pressed={isUniversalizationView}
+                aria-label={`Universalização, ${universalizationCount} municípios no planejamento`}
+                onClick={() => { setMapView('universalization'); setSelectedMunicipio(''); }}
+                className={`flex min-h-[84px] w-full items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a25c14] focus-visible:ring-offset-2 ${isUniversalizationView
                   ? 'border-[#153c61] bg-[#153c61] text-white shadow-md shadow-[#153c61]/15'
-                  : 'border-[#ead3a4] bg-[#fff8e8] text-[#153c61] hover:border-[#d8b366] hover:bg-[#fff4dd]'} ${forecast2027Count === 0 ? 'cursor-not-allowed opacity-60' : ''}`}
+                  : 'border-[#ead3a4] bg-[#fff8e8] text-[#153c61] hover:border-[#d8b366] hover:bg-[#fff4dd]'}`}
               >
                 <div>
-                  <span className={`block text-[10px] font-bold uppercase tracking-[0.12em] ${!isWithoutIntegralView && selectedYear === FORECAST_YEAR ? 'text-white/70' : 'text-[#a25c14]'}`}>2027</span>
+                  <span className={`block text-[10px] font-bold uppercase tracking-[0.12em] ${isUniversalizationView ? 'text-white/70' : 'text-[#a25c14]'}`}>Cenário</span>
                   <span className="mt-0.5 block text-lg font-extrabold tracking-tight">Universalização</span>
                 </div>
                 <div className="text-right">
-                  <span className="block text-2xl font-extrabold tabular-nums">{formatNumber(forecast2027Count)}</span>
-                  <span className={`block text-[10px] ${!isWithoutIntegralView && selectedYear === FORECAST_YEAR ? 'text-white/70' : 'text-slate-500'}`}>previsões de oferta</span>
+                  <span className="block text-2xl font-extrabold tabular-nums">{formatNumber(universalizationCount)}</span>
+                  <span className={`block text-[10px] ${isUniversalizationView ? 'text-white/70' : 'text-slate-500'}`}>no planejamento</span>
                 </div>
               </button>
             </div>
@@ -390,7 +397,7 @@ export default function EducacaoIntegralMap() {
                     <p className="mt-1 text-4xl font-extrabold tracking-tight text-[#475569] tabular-nums">{mapReady ? formatNumber(activeCount) : '—'}</p>
                     <p className="mt-1 max-w-[210px] text-sm text-slate-600">municípios sem Educação Integral</p>
                   </>
-                ) : isForecastView ? (
+                ) : isUniversalizationView ? (
                   <>
                     <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-500">Cenário ativo</p>
                     <p className="mt-1 text-xl font-extrabold tracking-tight text-[#153c61]">Universalização</p>
@@ -433,7 +440,7 @@ export default function EducacaoIntegralMap() {
                   <span className="text-sm font-bold text-[#153c61]">{selectedFeature.name}</span>
                   {isWithoutIntegralView ? (
                     <span className="shrink-0 rounded-full bg-[#475569] px-2 py-1 text-[10px] font-bold text-white">Sem Educação Integral</span>
-                  ) : isForecastView ? (
+                  ) : isUniversalizationView ? (
                     selectedUniversalizationStatus ? (
                       <span className="shrink-0 rounded-full px-2 py-1 text-[10px] font-bold text-white" style={{ backgroundColor: UNIVERSALIZATION_STATUS[selectedUniversalizationStatus.type].color }}>
                         {UNIVERSALIZATION_STATUS[selectedUniversalizationStatus.type].label}{selectedUniversalizationStatus.year ? ` ${selectedUniversalizationStatus.year}` : ''}
@@ -471,16 +478,16 @@ export default function EducacaoIntegralMap() {
 
           <div className="min-h-0 flex-1 border-t border-[#e9e5dc]">
             <div className="flex items-center justify-between px-4 py-3 sm:px-6">
-              <h3 className="text-xs font-bold uppercase tracking-[0.13em] text-[#153c61]">{isWithoutIntegralView ? 'Sem Educação Integral' : isForecastView ? 'Situações mapeadas' : 'Municípios participantes'}</h3>
+              <h3 className="text-xs font-bold uppercase tracking-[0.13em] text-[#153c61]">{isWithoutIntegralView ? 'Sem Educação Integral' : isUniversalizationView ? 'Situações mapeadas' : 'Municípios participantes'}</h3>
               {searchTerm.trim() && mapReady && <span className="rounded-full bg-[#e9eef3] px-2 py-1 text-[10px] font-bold text-[#153c61]">{visibleMunicipios.length}</span>}
             </div>
-            <div className="max-h-[350px] overflow-y-auto px-2 pb-3 sm:px-3 xl:max-h-[430px]" role="list" aria-label={isWithoutIntegralView ? 'Municípios sem Educação Integral' : isForecastView ? 'Municípios no planejamento de universalização' : `Municípios com Educação Integral até ${selectedYear}`}>
+            <div className="max-h-[350px] overflow-y-auto px-2 pb-3 sm:px-3 xl:max-h-[430px]" role="list" aria-label={isWithoutIntegralView ? 'Municípios sem Educação Integral' : isUniversalizationView ? 'Municípios no planejamento de universalização' : `Municípios com Educação Integral até ${selectedYear}`}>
               {visibleMunicipios.length ? visibleMunicipios.map((feature) => {
                 const key = municipioKey(feature.name);
                 const firstYear = cohortMap.get(key);
                 const status = universalizationMap.get(key);
                 const selected = selectedMunicipioKey === key;
-                const statusLabel = UNIVERSALIZATION_STATUS[status.type].label + (status.year ? ' ' + status.year : '');
+                const statusLabel = status ? UNIVERSALIZATION_STATUS[status.type].label + (status.year ? ' ' + status.year : '') : '';
                 return (
                   <div key={feature.geocode || feature.name} role="listitem">
                     <button
@@ -492,7 +499,7 @@ export default function EducacaoIntegralMap() {
                       <span className="truncate text-xs font-medium">{feature.name}</span>
                       {isWithoutIntegralView ? (
                         <span className="shrink-0 rounded-full bg-[#475569] px-2 py-0.5 text-[9px] font-bold text-white">Sem Educação Integral</span>
-                      ) : isForecastView ? (
+                      ) : isUniversalizationView ? (
                         <span className="shrink-0 rounded-full px-2 py-0.5 text-[9px] font-bold text-white" style={{ backgroundColor: UNIVERSALIZATION_STATUS[status.type].color }}>{statusLabel}</span>
                       ) : (
                         <span className={`shrink-0 text-[10px] font-bold tabular-nums ${selected ? 'text-white/75' : 'text-slate-400'}`}>{firstYear}</span>
@@ -509,7 +516,7 @@ export default function EducacaoIntegralMap() {
           <p className="border-t border-[#e9e5dc] px-4 py-3 text-[10px] leading-relaxed text-slate-400 sm:px-6">
             {isWithoutIntegralView
               ? 'Fonte: Secretaria da Educação do Estado da Bahia. Relação dos municípios que ainda não possuem Educação Integral.'
-              : isForecastView
+              : isUniversalizationView
               ? 'Fonte: Secretaria da Educação do Estado da Bahia. Situação do planejamento de universalização.'
               : 'Fonte: Secretaria da Educação do Estado da Bahia. Os totais apresentam a expansão acumulada por ano.'}
           </p>
@@ -518,8 +525,8 @@ export default function EducacaoIntegralMap() {
         <div className="flex min-h-[520px] flex-col bg-[#f7f6f1] p-3 sm:min-h-[650px] sm:p-5 lg:p-7">
           <div className="mb-3 flex flex-wrap items-start justify-between gap-3 px-1 sm:px-2">
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#a25c14]">{isWithoutIntegralView ? 'Camada específica' : isForecastView ? 'Cenário de universalização' : `Bahia • ${selectedYear}`}</p>
-              <h3 className="mt-1 text-lg font-bold text-[#153c61] sm:text-xl">{isWithoutIntegralView ? 'Municípios sem Educação Integral' : isForecastView ? 'Municípios por situação' : 'Municípios da Educação Integral'}</h3>
+              <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-[#a25c14]">{isWithoutIntegralView ? 'Camada específica' : isUniversalizationView ? 'Cenário de universalização' : `Bahia • ${selectedYear}`}</p>
+              <h3 className="mt-1 text-lg font-bold text-[#153c61] sm:text-xl">{isWithoutIntegralView ? 'Municípios sem Educação Integral' : isUniversalizationView ? 'Municípios por situação' : 'Municípios da Educação Integral'}</h3>
             </div>
             <div className="flex items-center gap-1 rounded-lg border border-[#e4dfd4] bg-white p-1 shadow-sm" aria-label="Controles de zoom do mapa">
               <button type="button" onClick={() => changeZoom(-0.2)} aria-label="Diminuir zoom" className="grid h-8 w-8 place-items-center rounded-md text-lg font-semibold text-[#153c61] transition hover:bg-[#f2f0e9]">−</button>
@@ -537,7 +544,7 @@ export default function EducacaoIntegralMap() {
                 Carregando mapa da Bahia...
               </div>
             ) : (
-              <svg viewBox={`0 0 ${SVG_W} ${SVG_H}`} role="img" aria-label={isWithoutIntegralView ? 'Mapa da Bahia destacando os municípios sem Educação Integral' : isForecastView ? 'Mapa da Bahia com os municípios do planejamento de universalização' : `Mapa da Bahia com municípios participantes da Educação Integral em ${selectedYear}`} className="h-full max-h-[720px] w-full">
+              <svg viewBox={`0 0 ${SVG_W} ${SVG_H}`} role="img" aria-label={isWithoutIntegralView ? 'Mapa da Bahia destacando os municípios sem Educação Integral' : isUniversalizationView ? 'Mapa da Bahia com os municípios do planejamento de universalização' : `Mapa da Bahia com municípios participantes da Educação Integral em ${selectedYear}`} className="h-full max-h-[720px] w-full">
                 <g transform={`translate(${SVG_W / 2} ${SVG_H / 2}) scale(${zoom}) translate(${-SVG_W / 2} ${-SVG_H / 2})`}>
                   {mapFeatures.map((feature) => {
                     const key = municipioKey(feature.name);
@@ -545,10 +552,10 @@ export default function EducacaoIntegralMap() {
                     const status = universalizationMap.get(key);
                     const isActive = isWithoutIntegralView
                       ? municipalitiesWithoutIntegralEducationKeys.has(key)
-                      : isForecastView ? Boolean(status) : firstYear && firstYear <= selectedYear;
+                      : isUniversalizationView ? Boolean(status) : firstYear && firstYear <= selectedYear;
                     const fill = isWithoutIntegralView
                       ? isActive ? WITHOUT_INTEGRAL_EDUCATION_COLOR : '#e7e4dc'
-                      : isForecastView
+                      : isUniversalizationView
                         ? status ? UNIVERSALIZATION_STATUS[status.type].color : '#e7e4dc'
                         : isActive ? YEAR_COLORS[firstYear] : '#e7e4dc';
                     const statusDescription = status
@@ -562,7 +569,7 @@ export default function EducacaoIntegralMap() {
                         d={feature.path}
                         aria-label={isWithoutIntegralView
                           ? `${feature.name}${isActive ? ', ainda sem Educação Integral' : ', fora da relação de municípios sem Educação Integral'}`
-                          : isForecastView
+                          : isUniversalizationView
                             ? `${feature.name}, ${statusDescription}`
                             : `${feature.name}${isActive ? `, participante desde ${firstYear}` : ', sem registro até ' + selectedYear}`}
                         className="cursor-pointer transition-colors duration-200"
@@ -600,7 +607,7 @@ export default function EducacaoIntegralMap() {
             )}
           </div>
 
-          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 px-1 sm:px-2" aria-label={isWithoutIntegralView ? 'Legenda dos municípios sem Educação Integral' : isForecastView ? 'Legenda das situações da universalização' : 'Legenda dos anos de entrada'}>
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 px-1 sm:px-2" aria-label={isWithoutIntegralView ? 'Legenda dos municípios sem Educação Integral' : isUniversalizationView ? 'Legenda das situações da universalização' : 'Legenda dos anos de entrada'}>
             {isWithoutIntegralView ? (
               <>
                 <span className="mr-1 text-[10px] font-bold uppercase tracking-[0.13em] text-slate-500">Legenda</span>
@@ -612,16 +619,16 @@ export default function EducacaoIntegralMap() {
                   <span className="h-3 w-3 rounded-[3px] bg-[#e7e4dc]" />Demais municípios
                 </span>
               </>
-            ) : isForecastView ? (
+            ) : isUniversalizationView ? (
               <>
                 <span className="mr-1 text-[10px] font-bold uppercase tracking-[0.13em] text-slate-500">Situação</span>
                 {[
-                  { type: 'forecast', label: 'Previsão 2027', count: forecast2027Count },
-                  { type: 'expansion', label: 'Obras previstas para expansão', count: expansionWorksCount },
-                  ...(proposalCount > 0 ? [{ type: 'proposal', label: 'Proposta', count: proposalCount }] : []),
-                  { type: 'licitation', label: 'Necessita licitação', count: needsLicitationCount },
+                  ...Object.entries(forecastByYear).map(([year, names]) => ({ type: 'forecast', key: `forecast-${year}`, label: `Previsão ${year}`, count: names.length })),
+                  { type: 'expansion', key: 'expansion', label: 'Obras previstas para expansão', count: expansionWorksCount },
+                  ...(proposalCount > 0 ? [{ type: 'proposal', key: 'proposal', label: 'Proposta', count: proposalCount }] : []),
+                  { type: 'licitation', key: 'licitation', label: 'Necessita licitação', count: needsLicitationCount },
                 ].map((item) => (
-                  <span key={item.type} className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600">
+                  <span key={item.key} className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600">
                     <span className="h-3 w-3 rounded-[3px]" style={{ backgroundColor: UNIVERSALIZATION_STATUS[item.type].color }} />
                     {item.label} <span className="text-slate-400">({formatNumber(item.count)})</span>
                   </span>

@@ -14,6 +14,8 @@ const YEAR_COLORS = {
   2026: '#C89414',
   2027: '#7C3AED',
 };
+const SINGLE_COLOR_YEAR = 2027;
+const SINGLE_COLOR = '#D91F26';
 const UNIVERSALIZATION_STATUS = {
   forecast: { label: 'Previsão para passar a ofertar', color: '#E8A11A' },
   proposal: { label: 'Proposta para passar a ofertar', color: '#164F86' },
@@ -258,6 +260,7 @@ export default function EducacaoIntegralMap() {
   const isWithoutIntegralView = mapView === 'without-integral';
   const isUniversalizationView = mapView === 'universalization';
   const isHistoricalView = !isWithoutIntegralView && !isUniversalizationView;
+  const isSingleColorYear = isHistoricalView && selectedYear === SINGLE_COLOR_YEAR;
   const previousYear = DATA_YEARS.filter((year) => year < selectedYear).at(-1);
   const selectedYearData = educationMunicipalitiesByYear[selectedYear];
   const selectedMunicipioKey = municipioKey(selectedMunicipio);
@@ -449,7 +452,7 @@ export default function EducacaoIntegralMap() {
                       <span className="shrink-0 rounded-full bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-500">Sem situação registrada</span>
                     )
                   ) : selectedCohort && selectedCohort <= selectedYear ? (
-                    <span className="shrink-0 rounded-full px-2 py-1 text-[10px] font-bold text-white" style={{ backgroundColor: YEAR_COLORS[selectedCohort] }}>
+                    <span className="shrink-0 rounded-full px-2 py-1 text-[10px] font-bold text-white" style={{ backgroundColor: isSingleColorYear ? SINGLE_COLOR : YEAR_COLORS[selectedCohort] }}>
                       Desde {selectedCohort}
                     </span>
                   ) : (
@@ -557,7 +560,7 @@ export default function EducacaoIntegralMap() {
                       ? isActive ? WITHOUT_INTEGRAL_EDUCATION_COLOR : '#e7e4dc'
                       : isUniversalizationView
                         ? status ? UNIVERSALIZATION_STATUS[status.type].color : '#e7e4dc'
-                        : isActive ? YEAR_COLORS[firstYear] : '#e7e4dc';
+                        : isActive ? (isSingleColorYear ? SINGLE_COLOR : YEAR_COLORS[firstYear]) : '#e7e4dc';
                     const statusDescription = status
                       ? `${UNIVERSALIZATION_STATUS[status.type].label}${status.year ? ` ${status.year}` : ''}`
                       : 'sem situação registrada na universalização';
@@ -607,7 +610,7 @@ export default function EducacaoIntegralMap() {
             )}
           </div>
 
-          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 px-1 sm:px-2" aria-label={isWithoutIntegralView ? 'Legenda dos municípios sem Educação Integral' : isUniversalizationView ? 'Legenda das situações da universalização' : 'Legenda dos anos de entrada'}>
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 px-1 sm:px-2" aria-label={isWithoutIntegralView ? 'Legenda dos municípios sem Educação Integral' : isUniversalizationView ? 'Legenda das situações da universalização' : isSingleColorYear ? `Legenda do mapa de ${SINGLE_COLOR_YEAR}` : 'Legenda dos anos de entrada'}>
             {isWithoutIntegralView ? (
               <>
                 <span className="mr-1 text-[10px] font-bold uppercase tracking-[0.13em] text-slate-500">Legenda</span>
@@ -635,6 +638,17 @@ export default function EducacaoIntegralMap() {
                 ))}
                 <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-500">
                   <span className="h-3 w-3 rounded-[3px] bg-[#e7e4dc]" />Sem situação registrada
+                </span>
+              </>
+            ) : isSingleColorYear ? (
+              <>
+                <span className="mr-1 text-[10px] font-bold uppercase tracking-[0.13em] text-slate-500">Legenda</span>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-600">
+                  <span className="h-3 w-3 rounded-[3px]" style={{ backgroundColor: SINGLE_COLOR }} />
+                  Com Educação Integral ({formatNumber(activeCount)})
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-slate-500">
+                  <span className="h-3 w-3 rounded-[3px] bg-[#e7e4dc]" />Sem registro no período
                 </span>
               </>
             ) : (
